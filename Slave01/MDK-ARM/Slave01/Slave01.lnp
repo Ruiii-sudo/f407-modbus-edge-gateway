@@ -1,0 +1,28 @@
+--cpu Cortex-M3
+"slave01\startup_stm32f103xb.o"
+"slave01\main.o"
+"slave01\gpio.o"
+"slave01\usart.o"
+"slave01\stm32f1xx_it.o"
+"slave01\stm32f1xx_hal_msp.o"
+"slave01\stm32f1xx_hal_gpio_ex.o"
+"slave01\stm32f1xx_hal_tim.o"
+"slave01\stm32f1xx_hal_tim_ex.o"
+"slave01\stm32f1xx_hal_uart.o"
+"slave01\stm32f1xx_hal.o"
+"slave01\stm32f1xx_hal_rcc.o"
+"slave01\stm32f1xx_hal_rcc_ex.o"
+"slave01\stm32f1xx_hal_gpio.o"
+"slave01\stm32f1xx_hal_dma.o"
+"slave01\stm32f1xx_hal_cortex.o"
+"slave01\stm32f1xx_hal_pwr.o"
+"slave01\stm32f1xx_hal_flash.o"
+"slave01\stm32f1xx_hal_flash_ex.o"
+"slave01\stm32f1xx_hal_exti.o"
+"slave01\system_stm32f1xx.o"
+"slave01\modbus_slave.o"
+"slave01\sensor.o"
+--strict --scatter "Slave01\Slave01.sct"
+--summary_stderr --info summarysizes --map --load_addr_map_info --xref --callgraph --symbols
+--info sizes --info totals --info unused --info veneers
+--list "Slave01.map" -o Slave01\Slave01.axf
