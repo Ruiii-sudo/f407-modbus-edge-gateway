@@ -3,7 +3,7 @@
 <title>Static Call Graph - [project\project.axf]</title></head>
 <body><HR>
 <H1>Static Call Graph for image project\project.axf</H1><HR>
-<BR><P>#&#060CALLGRAPH&#062# ARM Linker, 5060528: Last Updated: Wed Sep 23 04:08:30 2026
+<BR><P>#&#060CALLGRAPH&#062# ARM Linker, 5060528: Last Updated: Thu Sep 24 19:56:04 2026
 <BR><P>
 <H3>Maximum Stack Usage =       1168 bytes + Unknown(Functions without stacksize, Cycles, Untraceable Function Pointers)</H3><H3>
 Call chain for Maximum Stack Depth:</H3>
@@ -327,13 +327,13 @@ Function Pointers
  <LI><a href="#[131]">lv_textarea_event</a> from lv_textarea.o(i.lv_textarea_event) referenced from lv_textarea.o(.constdata)
  <LI><a href="#[105]">lv_tileview_constructor</a> from lv_tileview.o(i.lv_tileview_constructor) referenced from lv_tileview.o(.constdata)
  <LI><a href="#[106]">lv_tileview_tile_constructor</a> from lv_tileview.o(i.lv_tileview_tile_constructor) referenced from lv_tileview.o(.constdata)
- <LI><a href="#[8]">lv_txt_unicode_to_utf8</a> from lv_txt.o(i.lv_txt_unicode_to_utf8) referenced 2 times from lv_txt.o(.data)
- <LI><a href="#[7]">lv_txt_utf8_get_byte_id</a> from lv_txt.o(i.lv_txt_utf8_get_byte_id) referenced 2 times from lv_txt.o(.data)
- <LI><a href="#[9]">lv_txt_utf8_get_char_id</a> from lv_txt.o(i.lv_txt_utf8_get_char_id) referenced 2 times from lv_txt.o(.data)
+ <LI><a href="#[5]">lv_txt_unicode_to_utf8</a> from lv_txt.o(i.lv_txt_unicode_to_utf8) referenced 2 times from lv_txt.o(.data)
+ <LI><a href="#[9]">lv_txt_utf8_get_byte_id</a> from lv_txt.o(i.lv_txt_utf8_get_byte_id) referenced 2 times from lv_txt.o(.data)
+ <LI><a href="#[6]">lv_txt_utf8_get_char_id</a> from lv_txt.o(i.lv_txt_utf8_get_char_id) referenced 2 times from lv_txt.o(.data)
  <LI><a href="#[b]">lv_txt_utf8_get_length</a> from lv_txt.o(i.lv_txt_utf8_get_length) referenced 2 times from lv_txt.o(.data)
- <LI><a href="#[6]">lv_txt_utf8_next</a> from lv_txt.o(i.lv_txt_utf8_next) referenced 2 times from lv_txt.o(.data)
+ <LI><a href="#[8]">lv_txt_utf8_next</a> from lv_txt.o(i.lv_txt_utf8_next) referenced 2 times from lv_txt.o(.data)
  <LI><a href="#[a]">lv_txt_utf8_prev</a> from lv_txt.o(i.lv_txt_utf8_prev) referenced 2 times from lv_txt.o(.data)
- <LI><a href="#[5]">lv_txt_utf8_size</a> from lv_txt.o(i.lv_txt_utf8_size) referenced 2 times from lv_txt.o(.data)
+ <LI><a href="#[7]">lv_txt_utf8_size</a> from lv_txt.o(i.lv_txt_utf8_size) referenced 2 times from lv_txt.o(.data)
  <LI><a href="#[107]">lv_win_constructor</a> from lv_win.o(i.lv_win_constructor) referenced from lv_win.o(.constdata)
  <LI><a href="#[d7]">month_event_cb</a> from lv_calendar_header_arrow.o(i.month_event_cb) referenced 2 times from lv_calendar_header_arrow.o(i.my_constructor)
  <LI><a href="#[ec]">my_constructor</a> from lv_calendar_header_arrow.o(i.my_constructor) referenced 2 times from lv_calendar_header_arrow.o(.constdata)
@@ -1001,8 +1001,8 @@ Global Symbols
 <BR><BR>[Stack]<UL><LI>Max Depth = 40 + Unknown Stack Size
 <LI>Call Chain = __printf
 </UL>
-<BR>[Calls]<UL><LI><a href="#[177]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;_printf_percent
-<LI><a href="#[176]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;_is_digit
+<BR>[Calls]<UL><LI><a href="#[176]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;_is_digit
+<LI><a href="#[177]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;_printf_percent
 </UL>
 <BR>[Called By]<UL><LI><a href="#[16c]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;_printf_char_common
 </UL>
@@ -1753,6 +1753,7 @@ Global Symbols
 <LI><a href="#[200]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;modbus_read_holding
 <LI><a href="#[1a5]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;ESP8266_WaitResponse
 <LI><a href="#[19e]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;ESP8266_DumpRx
+<LI><a href="#[de]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;LVGL_Task
 </UL>
 
 <P><STRONG><a name="[1d8]"></a>HAL_IncTick</STRONG> (Thumb, 12 bytes, Stack size 0 bytes, stm32f4xx_hal.o(i.HAL_IncTick))
@@ -2171,11 +2172,12 @@ Global Symbols
 <BR>[Called By]<UL><LI><a href="#[1e4]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;LCD_Init
 </UL>
 
-<P><STRONG><a name="[de]"></a>LVGL_Task</STRONG> (Thumb, 112 bytes, Stack size 0 bytes, user_task.o(i.LVGL_Task))
+<P><STRONG><a name="[de]"></a>LVGL_Task</STRONG> (Thumb, 120 bytes, Stack size 0 bytes, user_task.o(i.LVGL_Task))
 <BR><BR>[Stack]<UL><LI>Max Depth = 792 + Unknown Stack Size
 <LI>Call Chain = LVGL_Task &rArr; ui_refresh_sensor_data &rArr; update_detail_stats &rArr; lv_label_set_text &rArr; lv_label_refr_text &rArr; lv_txt_get_size &rArr; _lv_txt_get_next_line &rArr; lv_font_get_glyph_width
 </UL>
 <BR>[Calls]<UL><LI><a href="#[1b3]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;HAL_GPIO_WritePin
+<LI><a href="#[19f]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;HAL_GetTick
 <LI><a href="#[19d]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;USART1_Printf
 <LI><a href="#[1ef]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;xTaskGetTickCount
 <LI><a href="#[1a6]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;vTaskDelay
@@ -5614,9 +5616,9 @@ Global Symbols
 <P><STRONG><a name="[2ab]"></a>lv_mem_buf_get</STRONG> (Thumb, 246 bytes, Stack size 32 bytes, lv_mem.o(i.lv_mem_buf_get))
 <BR><BR>[Stack]<UL><LI>Max Depth = 116<LI>Call Chain = lv_mem_buf_get &rArr; lv_tlsf_realloc &rArr; lv_tlsf_free &rArr; block_merge_next
 </UL>
-<BR>[Calls]<UL><LI><a href="#[3ca]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;lv_tlsf_realloc
-<LI><a href="#[3c8]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;lv_tlsf_malloc
+<BR>[Calls]<UL><LI><a href="#[3c8]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;lv_tlsf_malloc
 <LI><a href="#[3c9]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;lv_tlsf_free
+<LI><a href="#[3ca]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;lv_tlsf_realloc
 </UL>
 <BR>[Called By]<UL><LI><a href="#[40d]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;lv_roller_set_options
 <LI><a href="#[3d3]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;lv_obj_set_state
@@ -5733,9 +5735,9 @@ Global Symbols
 <P><STRONG><a name="[2f8]"></a>lv_mem_realloc</STRONG> (Thumb, 90 bytes, Stack size 16 bytes, lv_mem.o(i.lv_mem_realloc))
 <BR><BR>[Stack]<UL><LI>Max Depth = 100<LI>Call Chain = lv_mem_realloc &rArr; lv_tlsf_realloc &rArr; lv_tlsf_free &rArr; block_merge_next
 </UL>
-<BR>[Calls]<UL><LI><a href="#[3ca]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;lv_tlsf_realloc
-<LI><a href="#[3c8]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;lv_tlsf_malloc
+<BR>[Calls]<UL><LI><a href="#[3c8]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;lv_tlsf_malloc
 <LI><a href="#[3c9]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;lv_tlsf_free
+<LI><a href="#[3ca]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;lv_tlsf_realloc
 </UL>
 <BR>[Called By]<UL><LI><a href="#[27f]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;lv_obj_add_style
 <LI><a href="#[286]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;lv_obj_add_event_cb
@@ -9807,7 +9809,7 @@ Local Symbols
 <LI><a href="#[1a2]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;ESP8266_Init
 </UL>
 
-<P><STRONG><a name="[200]"></a>modbus_read_holding</STRONG> (Thumb, 426 bytes, Stack size 112 bytes, modbus.o(i.modbus_read_holding))
+<P><STRONG><a name="[200]"></a>modbus_read_holding</STRONG> (Thumb, 430 bytes, Stack size 112 bytes, modbus.o(i.modbus_read_holding))
 <BR><BR>[Stack]<UL><LI>Max Depth = 176<LI>Call Chain = modbus_read_holding &rArr; HAL_UART_Transmit &rArr; UART_WaitOnFlagUntilTimeout
 </UL>
 <BR>[Calls]<UL><LI><a href="#[19f]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;HAL_GetTick
@@ -11737,10 +11739,10 @@ Local Symbols
 <P><STRONG><a name="[440]"></a>block_insert</STRONG> (Thumb, 134 bytes, Stack size 8 bytes, lv_tlsf.o(i.block_insert))
 <BR><BR>[Stack]<UL><LI>Max Depth = 8<LI>Call Chain = block_insert
 </UL>
-<BR>[Called By]<UL><LI><a href="#[3ca]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;lv_tlsf_realloc
-<LI><a href="#[3c8]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;lv_tlsf_malloc
+<BR>[Called By]<UL><LI><a href="#[3c8]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;lv_tlsf_malloc
 <LI><a href="#[3c9]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;lv_tlsf_free
 <LI><a href="#[3cb]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;lv_tlsf_create_with_pool
+<LI><a href="#[3ca]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;lv_tlsf_realloc
 </UL>
 
 <P><STRONG><a name="[442]"></a>block_locate_free</STRONG> (Thumb, 248 bytes, Stack size 16 bytes, lv_tlsf.o(i.block_locate_free))
@@ -11752,26 +11754,26 @@ Local Symbols
 <P><STRONG><a name="[441]"></a>block_merge_next</STRONG> (Thumb, 210 bytes, Stack size 20 bytes, lv_tlsf.o(i.block_merge_next))
 <BR><BR>[Stack]<UL><LI>Max Depth = 20<LI>Call Chain = block_merge_next
 </UL>
-<BR>[Called By]<UL><LI><a href="#[3ca]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;lv_tlsf_realloc
-<LI><a href="#[3c9]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;lv_tlsf_free
+<BR>[Called By]<UL><LI><a href="#[3c9]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;lv_tlsf_free
+<LI><a href="#[3ca]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;lv_tlsf_realloc
 </UL>
 
 <P><STRONG><a name="[443]"></a>block_split</STRONG> (Thumb, 132 bytes, Stack size 8 bytes, lv_tlsf.o(i.block_split))
 <BR><BR>[Stack]<UL><LI>Max Depth = 8<LI>Call Chain = block_split
 </UL>
-<BR>[Called By]<UL><LI><a href="#[3ca]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;lv_tlsf_realloc
-<LI><a href="#[3c8]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;lv_tlsf_malloc
+<BR>[Called By]<UL><LI><a href="#[3c8]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;lv_tlsf_malloc
+<LI><a href="#[3ca]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;lv_tlsf_realloc
 </UL>
 
-<P><STRONG><a name="[8]"></a>lv_txt_unicode_to_utf8</STRONG> (Thumb, 132 bytes, Stack size 0 bytes, lv_txt.o(i.lv_txt_unicode_to_utf8))
+<P><STRONG><a name="[5]"></a>lv_txt_unicode_to_utf8</STRONG> (Thumb, 132 bytes, Stack size 0 bytes, lv_txt.o(i.lv_txt_unicode_to_utf8))
 <BR>[Address Reference Count : 1]<UL><LI> lv_txt.o(.data)
 </UL>
-<P><STRONG><a name="[7]"></a>lv_txt_utf8_get_byte_id</STRONG> (Thumb, 52 bytes, Stack size 24 bytes, lv_txt.o(i.lv_txt_utf8_get_byte_id))
+<P><STRONG><a name="[9]"></a>lv_txt_utf8_get_byte_id</STRONG> (Thumb, 52 bytes, Stack size 24 bytes, lv_txt.o(i.lv_txt_utf8_get_byte_id))
 <BR><BR>[Stack]<UL><LI>Max Depth = 24<LI>Call Chain = lv_txt_utf8_get_byte_id
 </UL>
 <BR>[Address Reference Count : 1]<UL><LI> lv_txt.o(.data)
 </UL>
-<P><STRONG><a name="[9]"></a>lv_txt_utf8_get_char_id</STRONG> (Thumb, 40 bytes, Stack size 24 bytes, lv_txt.o(i.lv_txt_utf8_get_char_id))
+<P><STRONG><a name="[6]"></a>lv_txt_utf8_get_char_id</STRONG> (Thumb, 40 bytes, Stack size 24 bytes, lv_txt.o(i.lv_txt_utf8_get_char_id))
 <BR><BR>[Stack]<UL><LI>Max Depth = 24<LI>Call Chain = lv_txt_utf8_get_char_id
 </UL>
 <BR>[Address Reference Count : 1]<UL><LI> lv_txt.o(.data)
@@ -11781,7 +11783,7 @@ Local Symbols
 </UL>
 <BR>[Address Reference Count : 1]<UL><LI> lv_txt.o(.data)
 </UL>
-<P><STRONG><a name="[6]"></a>lv_txt_utf8_next</STRONG> (Thumb, 234 bytes, Stack size 8 bytes, lv_txt.o(i.lv_txt_utf8_next))
+<P><STRONG><a name="[8]"></a>lv_txt_utf8_next</STRONG> (Thumb, 234 bytes, Stack size 8 bytes, lv_txt.o(i.lv_txt_utf8_next))
 <BR><BR>[Stack]<UL><LI>Max Depth = 8<LI>Call Chain = lv_txt_utf8_next
 </UL>
 <BR>[Address Reference Count : 1]<UL><LI> lv_txt.o(.data)
@@ -11791,7 +11793,7 @@ Local Symbols
 </UL>
 <BR>[Address Reference Count : 1]<UL><LI> lv_txt.o(.data)
 </UL>
-<P><STRONG><a name="[5]"></a>lv_txt_utf8_size</STRONG> (Thumb, 50 bytes, Stack size 0 bytes, lv_txt.o(i.lv_txt_utf8_size))
+<P><STRONG><a name="[7]"></a>lv_txt_utf8_size</STRONG> (Thumb, 50 bytes, Stack size 0 bytes, lv_txt.o(i.lv_txt_utf8_size))
 <BR>[Address Reference Count : 1]<UL><LI> lv_txt.o(.data)
 </UL>
 <P><STRONG><a name="[324]"></a>get_angle</STRONG> (Thumb, 112 bytes, Stack size 8 bytes, lv_arc.o(i.get_angle))

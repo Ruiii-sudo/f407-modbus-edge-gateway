@@ -48,7 +48,6 @@ static uint8_t modbus_tx_rx(uint8_t *tx, uint8_t tx_len, uint8_t *rx, uint16_t t
                 if (rx_len >= (uint32_t)(3 + data_bytes + 2))
                     break;
             }
-            start = HAL_GetTick();  /* 收到字节就重置超时 */
         }
     }
     return rx_len;

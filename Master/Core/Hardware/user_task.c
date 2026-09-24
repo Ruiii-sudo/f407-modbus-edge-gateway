@@ -144,10 +144,12 @@ void LVGL_Task(void *pvParameters)
     {
         lv_task_handler();  // LVGL任务处理
         
-        if (++refresh_cnt >= 40) // 每40次刷新一次传感器数据到UI界面（约200ms）
+        /* 传感器数据每秒更新一次，UI也每秒刷一次（避免无意义重画卡屏） */
+        static uint32_t s_last_ui_refresh = 0;
+        if (HAL_GetTick() - s_last_ui_refresh >= 1000)
         {
-            refresh_cnt = 0; // 重置计数器
-            ui_refresh_sensor_data(); // 刷新传感器数据到UI界面（读取全局数据）
+            s_last_ui_refresh = HAL_GetTick();
+            ui_refresh_sensor_data();
         }
 		
 		
