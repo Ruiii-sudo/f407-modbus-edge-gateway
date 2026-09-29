@@ -33,7 +33,7 @@ TaskHandle_t start_task_handle;
 void start_task(void *pvParameters);  //start_task函数声明
 
 /*LVGL图形任务配置*/
-#define LVGL_Task_STACK_SIZE 1024
+#define LVGL_Task_STACK_SIZE 2048
 #define LVGL_Task_PRIORITY 3
 TaskHandle_t LVGL_Task_handle;
 void LVGL_Task(void *pvParameters);  //LVGL_Task函数声明
@@ -243,9 +243,7 @@ void MQTT_Upload_Task(void *pvParameters)
             /* 状态1：正常连接，上报数据 */
             case MQTT_STATE_CONNECTED:
             {
-                taskENTER_CRITICAL();
                 EnvData_t data = SensorData_GetCurrent();
-                taskEXIT_CRITICAL();
 				
 				/* 检查数据上传开关：关闭时跳过本次发布，保持MQTT连接不断开 */
                 if (!ui_is_upload_enabled())

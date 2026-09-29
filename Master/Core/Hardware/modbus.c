@@ -2,6 +2,8 @@
 #include "usart.h"
 #include <string.h>
 #include "sensor_data.h"
+#include "FreeRTOS.h"
+#include "task.h"
 
 extern UART_HandleTypeDef huart3;
 
@@ -49,6 +51,7 @@ static uint8_t modbus_tx_rx(uint8_t *tx, uint8_t tx_len, uint8_t *rx, uint16_t t
                     break;
             }
         }
+		vTaskDelay(1);
     }
     return rx_len;
 }

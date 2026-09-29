@@ -1,5 +1,7 @@
 #include "sensor_data.h"
 #include <string.h>
+#include "FreeRTOS.h"
+#include "task.h"
 
 /* 当前最新数据 */
 static EnvData_t s_current_data;
@@ -46,8 +48,10 @@ void SensorData_Update(const EnvData_t *data)
 {
     if (data == NULL) return;
 
-    /* 保存当前值 */
-    s_current_data = *data;
+    
+	taskENTER_CRITICAL();
+    s_current_data = *data;  /* 保存当前值 */
+	taskEXIT_CRITICAL();
 
     /* 写入各传感器历史缓冲区 */
     float values[SENSOR_COUNT];
@@ -71,7 +75,11 @@ void SensorData_Update(const EnvData_t *data)
  */
 EnvData_t SensorData_GetCurrent(void)
 {
-    return s_current_data;
+    EnvData_t d;
+    taskENTER_CRITICAL();
+    d = s_current_data;          /* 读：关中断，防写方写到一半 */
+    taskEXIT_CRITICAL();
+    return d;
 }
 
 /**

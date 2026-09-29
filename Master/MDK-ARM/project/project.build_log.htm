@@ -27,7 +27,16 @@ Project File Date:  09/24/2026
 <h2>Output:</h2>
 *** Using Compiler 'V5.06 update 5 (build 528)', folder: 'D:\Keil5\ARM\ARMCC\Bin'
 Build target 'project'
-"project\project.axf" - 0 Error(s), 0 Warning(s).
+compiling sensor_data.c...
+compiling modbus.c...
+compiling user_task.c...
+..\Core\Hardware\user_task.c(140): warning:  #177-D: variable "refresh_cnt"  was declared but never referenced
+      uint32_t refresh_cnt = 0; // 用于定时刷新传感器数据到UI界面
+..\Core\Hardware\user_task.c: 1 warning, 0 errors
+linking...
+Program Size: Code=212804 RO-data=78180 RW-data=1072 ZI-data=110592  
+FromELF: creating hex file...
+"project\project.axf" - 0 Error(s), 1 Warning(s).
 
 <h2>Software Packages used:</h2>
 
@@ -50,7 +59,7 @@ Package Vendor: Keil
 <h2>Collection of Component Files used:</h2>
 
    * Component: ARM::CMSIS:CORE:5.0.1
-Build Time Elapsed:  00:00:05
+Build Time Elapsed:  00:00:09
 </pre>
 </body>
 </html>
